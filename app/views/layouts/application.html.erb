@@ -2,14 +2,41 @@
 <html>
   <head>
     <title>DemoWebUIC</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="header"><h2>The winter is coming</h2></div>
+      <div class="menu">
+	<ol>
+	  <li><a href="#">Inicio</a></li>
+	  <li><a href="#">Libros</a></li>
+	  <li><a href="#">Fotos</a></li>
+	  <li><a href="#">Música</a></li>
+	</ol>
+      </div>
+      <div class="content">
+	<%= yield %>
+      </div>
+      <div class="publicity">
+	<div>
+	  <p>
+	    Se vende colmillo de dragón.
+	  </p>
+	</div>
+      </div>
+      <footer class="footer">
+        <p>Copyright hbross 11.1 </p>
+      </footer>
+    </div>
+
   </body>
 </html>

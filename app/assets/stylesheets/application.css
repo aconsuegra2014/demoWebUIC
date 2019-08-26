@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px auto auto 40px;
+    grid-template-areas:
+    "h h h h h h h h h h h h"
+	"m m m m m m m m m m m m"
+	"c c c c c c c c c p p p"
+	"f f f f f f f f f f f f";
+}
+
+.header {
+    grid-area: h;
+}
+
+.menu {
+    grid-area: m;
+}
+
+.menu ol{
+    padding: 0;
+}
+.menu ol li{
+    display: inline-flex;
+}
+
+.content {
+    grid-area: c;
+}
+
+.footer {
+    grid-area: f;
+}
+.publicity{
+    grid-area: p;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+.header, .footer{
+    text-align: center;
+    background-color: snow;
+}
+
