@@ -10,15 +10,16 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require normalize
+ *= require wellcome
  *= require_self
  */
 
 .container {
-    max-width: 960px;
+    max-width: 984px;
     height: 100%;
     display: grid;
-    grid-gap: 3px;
+    grid-gap: 5px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
         "h h h h h h h h h h h h"
@@ -29,6 +30,7 @@
 
 }
 
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .container{
 	grid-template-areas:
@@ -40,7 +42,7 @@
     }
 }
 
-
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .container{
 	grid-template-areas:
@@ -53,6 +55,7 @@
 }
 
 
+/* Large devices (desktops, 984px and up) */
 @media (min-width: 960px) {
     .container{
 	grid-template-areas:
@@ -103,4 +106,16 @@ img{
 
 .center{
     margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+code{
+    background-color: lightgray;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+    overflow: auto;
 }

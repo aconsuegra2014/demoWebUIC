@@ -2,8 +2,34 @@
   <%= image_tag("large.jpg", srcset: [["large.jpg", "720w"], ["medium.jpg","600w"],["small.jpg","480w"]],
       sizes: "(min-width: 960px) 720px,(min-width: 800px) 600px, 100vw") %>
   <p>
-    Luego de varias temporadas esperando la llegada del invierno, este finalmente llegó.
-    Para mi una gran decepción. Desde que la serie avanzo más rápido que los libros fue perdiendo calidad hasta llegar a la octava temporda.
+    El atributo <strong><em>srcset</em></strong> espera una o más cadenas de texto separadas por comas indicando un posible origen del recurso a mostrar.
+    Estas cadenas de texto representan una URL.
   </p>
+  <p>
+    Las URLs pueden estar seguida por un espacio y:
+    <ul>
+      <li>
+	Un descriptor de ancho, en forma de entero positivo. Seguido de una "w".
+      </li>
+      <li>
+	Un descriptor de densidad de pixel, en forma de real positivo. Seguido por una "x".
+      </li>
+    </ul>
+
+    Ejemplo
+    <br>
+    
+    <pre>
+      <code>
+	&lt;img alt="Reloj automático" title="Reloj automático"
+	srcset="/assets/clock-large.jpg 960w,
+        /assets/clock-md-s.jpg 768w,
+	/assets/clock-sd-s.jpg 576w"
+	src="/assets/clock-large.jpg"&gt;
+      </code>
+    </pre>
+    <br>
+    Para más informacion visite <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset">developer.mozilla.org</a>
+    </p>
   
 </div>
