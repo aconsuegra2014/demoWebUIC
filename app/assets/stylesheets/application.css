@@ -17,6 +17,7 @@
 
 .container {
     max-width: 984px;
+    padding: 0 5px 0 5px;
     height: 100%;
     display: grid;
     grid-gap: 5px;
