@@ -1,6 +1,6 @@
 <div id="primaryNews">
-  <%= image_tag("large.jpg", srcset: [["large.jpg", "720w"], ["medium.jpg","600w"],["small.jpg","480w"]],
-      sizes: "(min-width: 960px) 720px,(min-width: 800px) 600px, 100vw") %>
+  <%= image_tag("large.jpg", srcset: [["large.jpg", "241w"], ["medium.jpg","600w"],["small.jpg","480w"]],
+      sizes: "(min-width: 960px) 241px,(min-width: 800px) 600px, 100vw") %>
   <p>
     El atributo <strong><em>srcset</em></strong> espera una o más cadenas de texto separadas por comas indicando un posible origen del recurso a mostrar.
     Estas cadenas de texto representan una URL.
@@ -16,13 +16,13 @@
       </li>
     </ul>
 
-    Ejemplo
+    Ejemplo:
     <br>
     
     <pre>
       <code>
 	&lt;img alt="Reloj automático" title="Reloj automático"
-	srcset="/assets/clock-large.jpg 960w,
+	srcset="/assets/clock-large.jpg 241w,
         /assets/clock-md-s.jpg 768w,
 	/assets/clock-sd-s.jpg 576w"
 	src="/assets/clock-large.jpg"&gt;
@@ -30,6 +30,8 @@
     </pre>
     <br>
     Para más informacion visite <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset">developer.mozilla.org</a>
-    </p>
-  
+  </p>
+  <p>
+    Con esto se le está diciendo al navegador que utilice la imagen que crea mas conveniente para mostrar.
+  </p>
 </div>
