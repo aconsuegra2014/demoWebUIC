@@ -2,7 +2,7 @@
   <%= image_tag("large.jpg", title: "Plaza de la Revolución", alt:  "Plaza de la Revolución, cielo nublado y banderas ondeando", srcset: [["large.jpg", "720w"], ["medium.jpg","768w"],["small.jpg","576w"]],
       sizes: "(min-width: 960px) 720px, (min-width: 768px) 768px, (min-width: 576px) 576px") %>
   <p>
-    El atributo <strong><em>srcset</em></strong> espera una o más cadenas de texto separadas por comas indicando un posible origen del recurso a mostrar.
+    El atributo <strong><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset">srcset</a></em></strong> espera una o más cadenas de texto separadas por comas indicando un posible origen del recurso a mostrar.
     Estas cadenas de texto representan una URL.
   </p>
   <p>
@@ -20,18 +20,46 @@
     <br>
     
     <pre>
-      <code>
+      <code class="code-sample-img">
 	&lt;img alt="Reloj automático" title="Reloj automático"
 	srcset="/assets/clock-large.jpg 241w,
-        /assets/clock-md-s.jpg 768w,
-	/assets/clock-sd-s.jpg 576w"
+                /assets/clock-md-s.jpg  768w,
+	        /assets/clock-sd-s.jpg  576w"
 	src="/assets/clock-large.jpg"&gt;
       </code>
     </pre>
-    <br>
-    Para más informacion visite <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset">developer.mozilla.org</a>
+
   </p>
   <p>
-    Con esto se le está diciendo al navegador que utilice la imagen que crea mas conveniente para mostrar.
+    Con esto se le está diciendo al navegador que utilice la imagen que crea más conveniente para mostrar.
+  </p>
+  <p>
+    Si se quiere ser más explicito sobre que imagen utilzar entonces será necesario combinar el atributo <strong><em>srcset</em></strong> con el atributo <strong><em>sizes</em></strong>.
+  </P>
+  <p>
+    El atributo <strong><em><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#sizes">sizes</em></strong></a> va a contener uno o más cadenas separadas por comas que representan los diferentes tamaños que puede tomar la imagen.
+  </p>
+  <p>
+    Cada tamaño de se define como una media condition separada por espacio y el espacio en pantalla que tomará la imagen cuando se cumpla la media condition.
+  </p>
+  <p>
+    Los tamaños se pueden dar en <em>px</em>, <em>em</em> o <em>vw</em>.
+  </p>
+  <p>
+    <br>
+    Ejemplo:
+
+    <pre>
+      <code class="code-sample-img">
+	&lt;img alt="Reloj automático" title="Reloj automático"
+	srcset="/assets/clock-large.jpg 241w,
+	        /assets/clock-md-s.jpg  768w,
+         	/assets/clock-sd-s.jpg  576w"
+	sizes="(min-width: 960px) 241px,
+	       (min-width: 768px) 768px,
+               (min-width: 576px) 576px"
+	src="/assets/clock-large.jpg"&gt;
+      </code>
+    </pre>
   </p>
 </div>

@@ -41,6 +41,7 @@
 	    "p p p p p p p p p p p p"
 	    "f f f f f f f f f f f f";
     }
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -53,6 +54,7 @@
 	    "p p p p p p p p p p p p"
 	    "f f f f f f f f f f f f";
     }
+
 }
 
 
@@ -118,13 +120,14 @@ code{
     display: block;
     font-weight: bold;
     font-size: 1.2em;
-    overflow: auto;
 }
+
+
 
 pre{
-    white-space: pre-wrap;
+    overflow: auto;
 }
-
+    
 
 p{
     margin: 0 0 1em 0;
