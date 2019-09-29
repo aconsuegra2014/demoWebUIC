@@ -92,8 +92,14 @@
 .footer {
     grid-area: f;
 }
+
 .publicity{
     grid-area: p;
+}
+
+#copy-right{
+    margin: 0;
+    padding: 10px 0;
 }
 
 
@@ -104,7 +110,9 @@ img{
 
 .header, .footer{
     text-align: center;
-    background-color: snow;
+    background-color:  hsla(300, 100%, 25%, 0.6901960784313725);
+        text-shadow: 2px 1px 2px hsl(300, 53%, 15%);
+    color: white;
 }
 
 .center{
