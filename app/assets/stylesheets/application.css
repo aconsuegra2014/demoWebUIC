@@ -72,6 +72,7 @@
 
 .header {
     grid-area: h;
+    border-radius: 7px 7px 0 0;
 }
 
 .menu {
@@ -91,6 +92,7 @@
 
 .footer {
     grid-area: f;
+    border-radius: 0 0 7px 7px;
 }
 
 .publicity{
